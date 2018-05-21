@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>This is a Cydia repo</p>
+</body>
+
+
+<head>
+    <style type="text/css">
+        .clockDesign{
+            font-size: 20px;
+            color: #000000;
+            height: auto;
+            width: 100px;
+            padding: 0px auto;
+            text-align: center;
+            font-family: Impact, Arial, sans-serif;
+        }
+    </style>
+    <script language="JavaScript">
+        
+        function clockBlock() {
+            
+            var timeNow=new Date();
+            
+            var hrs=timeNow.getHours();
+            var min=timeNow.getMinutes();
+            var sec=timeNow.getSeconds();
+            
+            if (hrs<10) {
+                hrs="0"+hrs;
+            }
+            if (min<10) {
+                min="0"+min;
+            }
+            if (sec<10) {
+                sec="0"+sec;
+            }
+            
+            var printClock=document.getElementById('clockDisplay');
+            printClock.textContent=hrs+":"+min+":"+sec;
+            printClock.innerText=hrs+":"+min+":"+sec;
+            
+            setTimeout('clockBlock()',1000);
+            
+        }
+    </script>
+</head>
+<body onLoad="clockBlock()">
+    <div id="clockDisplay" class="clockDesign" direction="ltr">
+    </div>
+</body>
+
+
+<p> </p>
+
+<a href="https://twitter.com/messages/compose?recipient_id=thunderbird0520&ref_src=twsrc%5Etfw" class="twitter-dm-button" data-screen-name="@thunderbird0520" data-show-count="false">connect dev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+</html>
